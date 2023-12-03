@@ -32,9 +32,7 @@
         // $conn = new mysqli("localhost", "root", "", "fitness");
         $sql1 =  "INSERT INTO registration (fullname,email,password)
                   VALUES ('{$fullname}','{$email}','{$password}')";
-        //   echo "<pre>";
-        //   print_r($sql1);
-        //   exit;
+       
     
         $result = mysqli_query($conn,$sql1);
         // $user= mysqli_fetch_assoc($result);
