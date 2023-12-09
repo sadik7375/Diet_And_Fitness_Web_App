@@ -1,3 +1,36 @@
+<!--  
+<?php
+  
+  $conn = mysqli_connect("localhost","root","","fitness") or die("Connection failed : " . mysqli_connect_error());
+
+  session_start();
+if(isset($_SESSION['email'])  )
+{
+ 
+  $email=$_SESSION['email'];
+ 
+ 
+
+}
+else{
+
+  header("location:../view/login.php");
+}
+
+
+
+
+
+
+
+
+
+
+?>  -->
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,14 +47,13 @@
   <nav class="bg-[#FEB600] p-4 text-white">
     <div class="container mx-auto">
       <div class="flex justify-between items-center">
-        <div class="text-xl font-semibold">Admin Panel</div>
+        <div class="text-xl font-semibold">Admin Panel </div>
         <div class="flex space-x-4">
           <a href="#" class="hover:text-gray-300">Home</a>
-          <a href="#" class="hover:text-gray-300">Dashboard</a>
-          <a href="#" class="hover:text-gray-300">Profile</a>
-          <a href="#" class="hover:text-gray-300">Add instructor</a>
-          <a href="#" class="hover:text-gray-300"></a>
-          <a href="#" class="hover:text-gray-300">Logout</a>
+        
+          <a href="addInstructor.php" class="hover:text-gray-300">Add instructor</a>
+         
+          <a href="logout.php"> logout</a>
         </div>
       </div>
     </div>
@@ -31,29 +63,37 @@
   <div class="container mx-auto mt-8 ml-24 p-4">
 
     <!-- Page Heading -->
-    <h2 class="text-2xl font-semibold mb-4">Dashboard</h2>
-
+    <h2 class="text-2xl font-semibold mb-4">Dashboard </h2>
+    <span class="text-lg font-semibold mb-4"><?php echo $email ?></span>
     <!-- Cards -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       <!-- Card 1 -->
       <a href="#"><div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold mb-2">Users</h3>
+        <h3 class="text-xl font-semibold mb-2">Client Charts Assign</h3>
         <p class="text-gray-600">Show all users. </p>
       </div></a>
      
-      <a href="#"><div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
-       <h3 class="text-xl font-semibold mb-2">All instructors</h3>
+      <a href="hiredInstructorInfo.php"><div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
+       <h3 class="text-xl font-semibold mb-2">Hired Instructor</h3>
         <p class="text-gray-600">Show all users. </p>
       </div></a>
       <!-- Card 2 -->
-      <a href="#"><div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold mb-2">Pogress</h3>
+      <a href="showInstructor.php"><div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold mb-2"> Instructor Details</h3>
         <p class="text-gray-600">Check user's activity.</p>
       </div><a>
 
       <!-- Card 3 -->
-     <a href="#"> <div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
+     <a href="showComplain.php"> <div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
         <h3 class="text-xl font-semibold mb-2">Complains</h3>
+        <p class="text-gray-600">Any issue to solve.</p>
+      </div></a>
+      <a href="#"> <div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold mb-2">Client Info</h3>
+        <p class="text-gray-600">Any issue to solve.</p>
+      </div></a>
+      <a href="#"> <div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold mb-2">Client payment</h3>
         <p class="text-gray-600">Any issue to solve.</p>
       </div></a>
     </div>

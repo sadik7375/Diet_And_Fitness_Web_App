@@ -10,14 +10,26 @@ if(isset($_POST['login']))
 
   if($email != null && $password != null)
   {
+
+
+
     $status = login ($email,$password);
-    if($status)
+    if($status=='admin')
     {       
-    
-         header('location: ../view/data.php');
+         session_start();
+         $_SESSION['email']=$email;
+         header('location: ../view/adminDashbroad.php');
     }
-    else
+    else if($status=='user')
     {
+
+      session_start();
+      $_SESSION['email']=$email;
+      header('location: ../view/clientProfile.php');
+
+    }
+
+    else{
       header('location: ../../view/login.php');
 
     }

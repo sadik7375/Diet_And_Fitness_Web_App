@@ -2,19 +2,20 @@
 
 
 //instructor registor
-function registration($name,$email,$password,$expericence,$expertise)
+function registration($name,$email,$password,$expericence,$expertise,$monthlyfee,$description)
     {  
         $conn = mysqli_connect("localhost","root","","fitness") or die("Connection failed : " . mysqli_connect_error());
         // $conn = new mysqli("localhost", "root", "", "fitness");
-        $sql1 =  "INSERT INTO instructor (name,email,password,expericence,expertise)
-                  VALUES ('{$name}','{$email}','{$password}','{$expericence}','{$expertise}')";
+        $sql1 = "INSERT INTO instructor (name, email, password, expericence, expertise, monthlyfee, description)
+          VALUES ('{$name}', '{$email}', '{$password}', '{$expericence}', '{$expertise}', '{$monthlyfee}', '{$description}')";
+
         //   echo "<pre>";
         //   print_r($sql1);
         //   exit;
     
         $result = mysqli_query($conn,$sql1);
-        // // $user= mysqli_fetch_assoc($result);
-        // // echo $user;
+        //  $user= mysqli_fetch_assoc($result);
+        // echo $user;
         // // echo $result;
 
       
@@ -43,7 +44,7 @@ function getAllUsers()
 
     $conn = mysqli_connect("localhost","root","","fitness") or die("Connection failed : " . mysqli_connect_error());
 
-    $sql="SELECT id,name,email,expericence,expertise FROM instructor";
+    $sql="SELECT id,name,email,expericence,expertise,monthlyfee,description FROM instructor";
     $result=$conn->query($sql);
 
     $conn->close();

@@ -12,14 +12,16 @@ if(isset($_POST['submit'])){
     $password =$_POST['password'];
     $expericence=$_POST['experience'];
     $expertise=$_POST['expertise'];
+    $monthlyfee=$_POST['monthlyfee'];
+    $description=$_POST['description'];
      
    
      if($name==" " || $password==" " || $email== " "  )
      {
-        header("location:../view/register.php");
+        header("location:../view/hireinstuctor.php");
      }else{
 
-        $status=registration($name,$email,$password,$expericence,$expertise);
+        $status=registration($name,$email,$password,$expericence,$expertise,$monthlyfee,$description);
         if($status)
         {
             

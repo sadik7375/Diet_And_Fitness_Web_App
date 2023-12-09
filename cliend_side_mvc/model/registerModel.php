@@ -30,7 +30,7 @@
     {  
         $conn = mysqli_connect("localhost","root","","fitness") or die("Connection failed : " . mysqli_connect_error());
         // $conn = new mysqli("localhost", "root", "", "fitness");
-        $sql1 =  "INSERT INTO registration (fullname,email,password)
+        $sql1 =  "INSERT INTO user (name,email,password)
                   VALUES ('{$fullname}','{$email}','{$password}')";
        
     
