@@ -41,6 +41,16 @@ if(isset($_POST['submit'])){
    }
    
 
+   if (isset($_GET['delete_id'])) {
+      $instructorId = $_GET['delete_id'];
+  
+     
+      deleteInstructor($instructorId);
+  
+   
+      header("Location: ../view/hiredInstructorInfo.php");
+      exit();
+  }
 
 
 

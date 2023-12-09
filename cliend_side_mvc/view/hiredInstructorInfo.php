@@ -82,9 +82,9 @@ $hiredInstructors = getHiredInstructors();
                    <?php echo $instructor['clientemail']; ?>
                 </td>
                 <td class="px-6 py-4">
-                   <a class="text-green-600 font-semibold" href="">Assign</a>
-                   <a class="text-red-600 font-semibold" href="">Cancel</a>
-                </td>
+    <a href="../controller/hiredInstructorController.php?delete_id=<?php echo $instructor['id']; ?>" class="text-red-600 font-semibold">Cancel</a>
+</td>
+
                
             </tr>
             <?php endforeach; ?>

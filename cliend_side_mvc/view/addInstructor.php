@@ -16,10 +16,9 @@
       <div class="flex justify-between items-center">
         <div class="text-xl font-semibold">Admin Panel</div>
         <div class="flex space-x-4">
-          <a href="#" class="hover:text-gray-300">Home</a>
-          <a href="#" class="hover:text-gray-300">Dashboard</a>
-          <a href="#" class="hover:text-gray-300">Settings</a>
-          <a href="#" class="hover:text-gray-300">Logout</a>
+          <a href="adminDashbroad.php" class="hover:text-gray-300">Home</a>
+          
+          <a href="logout.php"> logout</a>
         </div>
       </div>
     </div>
@@ -56,7 +55,7 @@
         </div>
         <div class="mb-4">
       
-          <input type="text" placeholder="Password" id="name" name="password" class="w-full border p-2 rounded-md">
+          <input type="text" placeholder="phone number" id="name" name="phone" class="w-full border p-2 rounded-md">
         </div>
         <div class="mb-4">
         

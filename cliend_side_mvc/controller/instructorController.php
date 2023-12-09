@@ -9,19 +9,19 @@ if(isset($_POST['submit'])){
     
     $name =$_POST['name'];
     $email=$_POST['email'];
-    $password =$_POST['password'];
+    $phone =$_POST['phone'];
     $expericence=$_POST['experience'];
     $expertise=$_POST['expertise'];
     $monthlyfee=$_POST['monthlyfee'];
     $description=$_POST['description'];
      
    
-     if($name==" " || $password==" " || $email== " "  )
+     if($name==" " || $phone==" " || $email== " "  )
      {
         header("location:../view/hireinstuctor.php");
      }else{
 
-        $status=registration($name,$email,$password,$expericence,$expertise,$monthlyfee,$description);
+        $status=registration($name,$email,$phone,$expericence,$expertise,$monthlyfee,$description);
         if($status)
         {
             
@@ -51,6 +51,19 @@ if(isset($_POST['submit'])){
 
    
 
+
+
+
+if (isset($_GET['delete_id'])) {
+    $instructorId = $_GET['delete_id'];
+
+   
+    deleteInstructor($instructorId);
+
+ 
+    header("Location: ../view/showInstructor.php");
+    exit();
+}
 
 
 

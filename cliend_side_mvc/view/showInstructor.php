@@ -9,7 +9,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch data from the database
-$sql = "SELECT id, name, email, expericence, expertise FROM instructor";
+$sql = "SELECT id, name, email, expericence, expertise,monthlyfee,description FROM instructor";
 $result = $conn->query($sql);
 
 // Close the connection
@@ -39,6 +39,8 @@ $conn->close();
                     <th class="py-3 px-4 border-b">Email</th>
                     <th class="py-3 px-4 border-b">Experience</th>
                     <th class="py-3 px-4 border-b">Expertise</th>
+                    <th class="py-3 px-4 border-b">MonthlyFee</th>
+                    <th class="py-3 px-4 border-b">Description</th>
                     <th class="py-3 px-4 border-b">Action</th>
                 </tr>
             </thead>
@@ -51,11 +53,15 @@ $conn->close();
                     echo "<td class='py-3 px-4 border-b'>" . $row['email'] . "</td>";
                     echo "<td class='py-3 px-4 border-b'>" . $row['expericence'] . "</td>";
                     echo "<td class='py-3 px-4 border-b'>" . $row['expertise'] . "</td>";
+                    echo "<td class='py-3 px-4 border-b'>" . $row['monthlyfee'] . "</td>";
+                    echo "<td class='py-3 px-4 border-b'>" . $row['description'] . "</td>";
                 
                     // Add action buttons
                     echo "<td class='py-3 px-4 border-b'>";
-                    echo "<button class='bg-blue-500 text-white py-1 px-2 rounded-full mr-2 hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue'>Update</button>";
+                    // echo "<button class='bg-blue-500 text-white py-1 px-2 rounded-full mr-2 hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue'>Update</button>";
+                    echo "<a href='../controller/instructorController.php?delete_id=" . $row['id'] . "'>";
                     echo "<button class='bg-red-500 text-white py-1 px-2 rounded-full hover:bg-red-600 focus:outline-none focus:shadow-outline-red'>Delete</button>";
+                    echo "</a>";
                     echo "</td>";
                 
                     echo "</tr>";

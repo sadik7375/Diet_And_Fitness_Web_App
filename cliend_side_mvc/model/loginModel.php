@@ -30,7 +30,11 @@ function login($email,$password)
 			
 		  }
 
-		if($user && $user['id']==1)
+		if($user && $user['id']==1   )
+		{
+			return 'admin';
+		}
+		else if($user && $user['id']==3)
 		{
 			return 'admin';
 		}

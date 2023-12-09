@@ -29,7 +29,19 @@
 
 
 
-
+    function deleteInstructor($instructorId)
+    {
+        $conn = mysqli_connect("localhost", "root", "", "fitness") or die("Connection failed: " . mysqli_connect_error());
+    
+        // Use prepared statements to prevent SQL injection
+        $sql = "DELETE FROM hiredinstructor WHERE id = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $instructorId);
+        $stmt->execute();
+        $stmt->close();
+    
+        $conn->close();
+    }
 
 
 

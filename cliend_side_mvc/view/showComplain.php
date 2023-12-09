@@ -34,9 +34,9 @@ function displayComplaints()
 
     foreach ($complaints as $complaint) {
         echo '<tr>
-                <td class="border p-2 ">' . htmlspecialchars($complaint['email']) . '</td>
-                <td class="border p-2">' . htmlspecialchars($complaint['subject']) . '</td>
-                <td class="border p-2">' . htmlspecialchars($complaint['description']) . '</td>
+                <td class="border p-2 ">' . $complaint['email']. '</td>
+                <td class="border p-2">' .$complaint['subject']. '</td>
+                <td class="border p-2">' .$complaint['description']. '</td>
                 <td>
                    
                     <a href="replyBox.php?email=' . urlencode($complaint['email']) . '">

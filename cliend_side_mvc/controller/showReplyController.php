@@ -1,7 +1,7 @@
 <?php
 require_once ('../model/showReplyModel.php');
-function getAllReply() {
-    return getReply();
+function getAllReply($email) {
+    return getReply($email);
 }
 
 

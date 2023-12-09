@@ -39,9 +39,9 @@ else{
       <div class="flex justify-between items-center">
         <div class="text-xl font-semibold">Diet and Fitness</div>
         <div class="flex space-x-4">
-          <a href="#" class="hover:text-gray-300">Home</a>
-          <a href="#" class="hover:text-gray-300">Profile</a>
-          <a href="#" class="hover:text-gray-300">Logout</a>
+          <a href="adminDashbroad.php" class="hover:text-gray-300">Home</a>
+          
+          <a href="logout.php"> logout</a>
          
       </div>
     </div>
@@ -66,7 +66,7 @@ else{
     </form>
     <?php
     require_once '../controller/showReplyController.php';
-    $replies = getAllReply(); // Corrected the function call
+    $replies = getAllReply($email);  
     ?>
 <main class="container mx-auto px-4 py-8">
 
@@ -79,7 +79,7 @@ else{
         echo '<span class="text-sm font-bold mb-4">' . ($row['created_date']) . '</span>';
         echo '<p class="text-gray-700 text-lg ">' . ($row['reply']) . '</p>';
         echo '</div>';
-        echo '<button class="text-red-500 font-semibold pl-3 pr-3 pb-2 pt-2"    >Delete</button>';
+        // echo '<button class="text-red-500 font-semibold pl-3 pr-3 pb-2 pt-2"    >Delete</button>';
 
     }
     ?>

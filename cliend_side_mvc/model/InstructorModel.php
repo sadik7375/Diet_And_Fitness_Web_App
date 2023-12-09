@@ -2,12 +2,12 @@
 
 
 //instructor registor
-function registration($name,$email,$password,$expericence,$expertise,$monthlyfee,$description)
+function registration($name,$email,$phone,$expericence,$expertise,$monthlyfee,$description)
     {  
         $conn = mysqli_connect("localhost","root","","fitness") or die("Connection failed : " . mysqli_connect_error());
         // $conn = new mysqli("localhost", "root", "", "fitness");
-        $sql1 = "INSERT INTO instructor (name, email, password, expericence, expertise, monthlyfee, description)
-          VALUES ('{$name}', '{$email}', '{$password}', '{$expericence}', '{$expertise}', '{$monthlyfee}', '{$description}')";
+        $sql1 = "INSERT INTO instructor (name, email, phone, expericence, expertise, monthlyfee, description)
+          VALUES ('{$name}', '{$email}', '{$phone}', '{$expericence}', '{$expertise}', '{$monthlyfee}', '{$description}')";
 
         //   echo "<pre>";
         //   print_r($sql1);
@@ -44,7 +44,7 @@ function getAllUsers()
 
     $conn = mysqli_connect("localhost","root","","fitness") or die("Connection failed : " . mysqli_connect_error());
 
-    $sql="SELECT id,name,email,expericence,expertise,monthlyfee,description FROM instructor";
+    $sql="SELECT id,name,email,phone,expericence,expertise,monthlyfee,description FROM instructor";
     $result=$conn->query($sql);
 
     $conn->close();
@@ -59,6 +59,38 @@ function getAllUsers()
 }
 
 
+
+
+function deleteInstructor($instructorId)
+{
+    $conn = mysqli_connect("localhost", "root", "", "fitness") or die("Connection failed: " . mysqli_connect_error());
+
+    // Use prepared statements to prevent SQL injection
+    $sql = "DELETE FROM instructor WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $instructorId);
+    $stmt->execute();
+    $stmt->close();
+
+    $conn->close();
+}
+
+
+function clientHiredInstructor()
+{
+
+    $conn = mysqli_connect("localhost", "root", "", "fitness") or die("Connection failed: " . mysqli_connect_error());
+
+    $sql="SELECT instructorid,clientemail FROM hiredinstructor ";
+    $result=$conn->query($sql);
+
+    $conn->close();
+
+    return $result;
+
+
+
+}
 
 
 
