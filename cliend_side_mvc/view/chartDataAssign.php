@@ -61,20 +61,27 @@
         </div>
         <div class="mb-4">
         
-        <input type="text" placeholder="Expertise" id="name" name="expertise" class="w-full border p-2 rounded-md">
+        <input type="text" placeholder="monday" name="monday" class="w-full border p-2 rounded-md">
       </div>
       <div class="mb-4">
         
-        <input type="text" placeholder="Monthly Fee" id="name" name="monthlyfee" class="w-full border p-2 rounded-md">
-      </div>
-      <div class="mb-4">
-      <div class="mb-4">
-        
-        <textarea type="text" placeholder="description"  name="description" class="w-full border p-2 rounded-md"></textarea>
+        <input type="text" placeholder="tuesday"  name="tuesday" class="w-full border p-2 rounded-md">
       </div>
       <div class="mb-4">
         
-        <button name="submit" class="bg-[#FEB600] pl-3 pr-3 pb-2 pt-2">Add instructor</button>
+        <input type="text" placeholder="wednesday"  name="wednesday" class="w-full border p-2 rounded-md">
+      </div>
+      <div class="mb-4">
+        
+        <input type="text" placeholder="thursday"  name="wednesday" class="w-full border p-2 rounded-md">
+      </div>
+      
+      <div class="mb-4">
+        
+        <input type="text" placeholder="friday"  name="friday" class="w-full border p-2 rounded-md">
+      </div>
+        
+        <button name="submit" class="bg-[#FEB600] pl-3 pr-3 pb-2 pt-2">Send charts</button>
       </div>
 
 
