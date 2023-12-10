@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+// include "config.php";
 include "../model/loginModel.php";
 
 if(isset($_POST['login']))

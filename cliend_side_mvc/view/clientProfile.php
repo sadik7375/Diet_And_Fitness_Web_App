@@ -66,7 +66,7 @@ else{
          </div>
             <div class="mr-4 p-3 text-center">
            
-              <a href="" class="bg-[#FEB600] active:bg-pink-600 uppercase cursor-pointer text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150" type="button">
+              <a href="table.php" class="bg-[#FEB600] active:bg-pink-600 uppercase cursor-pointer text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150" type="button">
                 check Diet chart
                 </a>
             </div>
