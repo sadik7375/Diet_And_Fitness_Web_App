@@ -70,7 +70,9 @@ $conn = mysqli_connect("localhost","root","","fitness") or die("Connection faile
 
               <!--image-->
     <div class="w-1/2 md:block ">
-        <img class= "rounded-2xl" src="login.jpg" alt="">
+    <img class="rounded-2xl" src="../image/login.jpg" alt="">
+
+    
 
 
     </div>

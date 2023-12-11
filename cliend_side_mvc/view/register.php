@@ -80,7 +80,7 @@
 
               <!--image-->
     <div class="w-1/2 md:block hidden">
-        <img class= "rounded-2xl" src="register.jpg" alt="">
+        <img class= "rounded-2xl" src="../image/register.jpg" alt="">
     </div>
 
 

@@ -39,9 +39,7 @@ $hiredInstructors = getHiredInstructors();
       <div class="flex justify-between items-center">
         <div class="text-xl font-semibold">Admin Panel </div>
         <div class="flex space-x-4">
-          <a href="#" class="hover:text-gray-300">Home</a>
-        
-          <a href="addInstructor.php" class="hover:text-gray-300">Add instructor</a>
+       
          
           <a href="logout.php"> logout</a>
         </div>

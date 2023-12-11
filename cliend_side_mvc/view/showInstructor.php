@@ -28,7 +28,18 @@ $conn->close();
 </head>
 
 <body class="bg-gray-100 p-6">
-
+<nav class="bg-[#FEB600] p-4 text-white">
+    <div class="container mx-auto">
+      <div class="flex justify-between items-center">
+        <div class="text-xl font-semibold">Admin Panel </div>
+        <div class="flex space-x-4">
+       
+         
+          <a href="logout.php"> logout</a>
+        </div>
+      </div>
+    </div>
+  </nav>
     <div class="container mx-auto bg-white p-8 rounded-lg shadow-lg">
         <h1 class="text-3xl font-bold mb-6">Instuctor Data </h1>
 

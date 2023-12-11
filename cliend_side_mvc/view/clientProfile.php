@@ -41,7 +41,7 @@ else{
 
 <section class="relative block h-500-px">
     <div class="absolute top-0 w-full h-full bg-center bg-cover" style="
-            background-image: url('cover.png');
+            background-image: url('../image/cover.png');
           ">
     
     </div>
@@ -53,7 +53,7 @@ else{
       <div class="flex flex-wrap justify-center">
         <div class="w-full px-4 flex justify-center">
           <div class="relative ">
-            <img alt="log" src="logo.png" class="shadow-lg rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px">
+            <img alt="log" src="../image/logo.png" class="shadow-lg rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px">
           </div>
         </div>
         <div class="w-full px-4 text-center mt-20">
@@ -66,7 +66,7 @@ else{
          </div>
             <div class="mr-4 p-3 text-center">
            
-              <a href="table.php" class="bg-[#FEB600] active:bg-pink-600 uppercase cursor-pointer text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150" type="button">
+              <a href="dietchartsShowToClient.php" class="bg-[#FEB600] active:bg-pink-600 uppercase cursor-pointer text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150" type="button">
                 check Diet chart
                 </a>
             </div>

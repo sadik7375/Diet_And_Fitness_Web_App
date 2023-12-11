@@ -20,12 +20,6 @@ else{
 
 
 
-
-
-
-
-
-
 ?>  -->
 
 
@@ -43,59 +37,75 @@ else{
 
 <body class="font-sans bg-gray-100">
 
-  <!-- Navbar -->
+<?php if ($email == 'admin123@gmail.com' || $email == 'instuctor1@gmail.com'    ): ?>
   <nav class="bg-[#FEB600] p-4 text-white">
     <div class="container mx-auto">
       <div class="flex justify-between items-center">
         <div class="text-xl font-semibold">Admin Panel </div>
         <div class="flex space-x-4">
-          <!-- <a href="#" class="hover:text-gray-300">Home</a> -->
+          
         
-          <?php if ($email == 'admin123@gmail.com'): ?>
+          
             <a href="addInstructor.php" class="hover:text-gray-300">Add instructor</a>
-          <?php endif; ?>
+          
          
           <a href="logout.php"> logout</a>
         </div>
       </div>
     </div>
   </nav>
+  <?php endif; ?>
 
-  <!-- Main Content -->
-  <div class="container mx-auto mt-8 ml-24 p-4">
+  <div class="container mx-auto mt-8 ml-20 p-4">
 
-    <!-- Page Heading -->
+  <?php if ($email == 'admin123@gmail.com' || $email == 'instuctor1@gmail.com'    ): ?>
     <h2 class="text-2xl font-semibold mb-4">Dashboard </h2>
     <span class="text-lg font-semibold mb-4">welcome to <?php echo $email ?></span>
     <!-- Cards -->
     <div class="grid grid-cols-1 mt-4 md:grid-cols-2 lg:grid-cols-4 gap-4">
-      <!-- Card 1 -->
-      <a href="#"><div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold mb-2">Client Medical data</h3>
-        <p class="text-gray-600">Show all users. </p>
+
+      <a href="chartshowAdmin.php"><div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold mb-2">Client Diet charts</h3>
+        <p class="text-gray-600">Show all Diet charts </p>
       </div></a>
+
+      <?php endif; ?>
+
       <?php if ($email == 'admin123@gmail.com'): ?>
       <a href="hiredInstructorInfo.php"><div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
        <h3 class="text-xl font-semibold mb-2">Hired Instructor</h3>
-        <p class="text-gray-600">Show all users. </p>
+        <p class="text-gray-600">Show all Hired instructor. </p>
       </div></a>
       <?php endif; ?>
-      <!-- Card 2 -->
+     
       <?php if ($email == 'admin123@gmail.com'): ?>
       <a href="showInstructor.php"><div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
         <h3 class="text-xl font-semibold mb-2"> Instructor Details</h3>
-        <p class="text-gray-600">Check user's activity.</p>
+        <p class="text-gray-600">show all Instructor Details</p>
       </div><a>
       <?php endif; ?>
-      <!-- Card 3 -->
+    
+
+
+      <?php if ($email == 'admin123@gmail.com' || $email == 'instuctor1@gmail.com'    ): ?>
      <a href="showComplain.php"> <div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
         <h3 class="text-xl font-semibold mb-2">Complains</h3>
         <p class="text-gray-600">Any issue to solve.</p>
       </div></a>
+      
+      <?php endif; ?>
       <?php if ($email == 'admin123@gmail.com'): ?>
-      <a href="#"> <div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
-        <h3 class="text-xl font-semibold mb-2">Client Info</h3>
-        <p class="text-gray-600">Any issue to solve.</p>
+      <a href="addInstructor.php"> <div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold mb-2">Add instructor</h3>
+        <p class="text-gray-600">Add Instructor</p>
+      </div></a>
+      <?php endif; ?>
+
+
+      <?php if ($email == 'admin123@gmail.com'): ?>
+      <a href="chartDataAssign.php"> <div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold mb-2">Add Diet charts</h3>
+        <p class="text-gray-600">Diet charts</p>
       </div></a>
       <?php endif; ?>
      

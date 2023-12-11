@@ -37,11 +37,11 @@
     <div class="w-4/5 p-4">
 
       <!-- Page Heading -->
-      <h2 class="text-2xl font-semibold   ml-32">Add Instructor</h2>
+      <h2 class="text-2xl font-semibold   ml-32">Add Client Diet charts</h2>
 
       <!-- Form for Instructor Information -->
       <div class="bg-gray-300  ml-32 p-12 shadow-xl">
-      <form  method="POST" action="../controller/instructorController.php" class="max-w-md mx-auto border-spacing-2">
+      <form  method="POST" action="../controller/chartDataController.php" class="max-w-md mx-auto border-spacing-2">
 
         <div class="mb-4">
          
@@ -49,7 +49,8 @@
         </div>
         <div class="mb-4">
          
-          <input type="text" placeholder="Meal of the day" id="name" name="Meal of the day" class="w-full border p-2 rounded-md">
+        <input type="text" placeholder="Meal of the day" id="name" name="mealday" class="w-full border p-2 rounded-md">
+
         </div>
         <div class="mb-4">
       
@@ -73,7 +74,8 @@
       </div>
       <div class="mb-4">
         
-        <input type="text" placeholder="thursday"  name="wednesday" class="w-full border p-2 rounded-md">
+      <input type="text" placeholder="thursday" name="thursday" class="w-full border p-2 rounded-md">
+
       </div>
       
       <div class="mb-4">
