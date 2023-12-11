@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 09, 2023 at 10:13 PM
+-- Generation Time: Dec 11, 2023 at 08:49 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `fitness`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `adminandinstructorlogin`
+--
+
+CREATE TABLE `adminandinstructorlogin` (
+  `id` int(50) NOT NULL,
+  `email` varchar(300) NOT NULL,
+  `password` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `adminandinstructorlogin`
+--
+
+INSERT INTO `adminandinstructorlogin` (`id`, `email`, `password`) VALUES
+(1, 'admin@gmail.com', '12345'),
+(2, 'instructor@gmail.com', '12345');
 
 -- --------------------------------------------------------
 
@@ -59,6 +79,32 @@ CREATE TABLE `data` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `dietchart`
+--
+
+CREATE TABLE `dietchart` (
+  `id` int(100) NOT NULL,
+  `email` varchar(300) NOT NULL,
+  `mealday` varchar(300) NOT NULL,
+  `saturday` varchar(300) NOT NULL,
+  `sunday` varchar(300) NOT NULL,
+  `monday` varchar(300) NOT NULL,
+  `tuesday` varchar(300) NOT NULL,
+  `wednesday` varchar(300) NOT NULL,
+  `thursday` varchar(300) NOT NULL,
+  `friday` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `dietchart`
+--
+
+INSERT INTO `dietchart` (`id`, `email`, `mealday`, `saturday`, `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday`) VALUES
+(6, 'harun@gmail.com', 'lanch', 'asda', 'asda', 'dadasd', 'asda', 'asd', 'asda', 'asd');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `hiredinstructor`
 --
 
@@ -74,7 +120,10 @@ CREATE TABLE `hiredinstructor` (
 
 INSERT INTO `hiredinstructor` (`id`, `instructorid`, `clientemail`) VALUES
 (6, '13', 'wahidsadik38@gmail.com'),
-(7, '14', 'wahidsadik7375@gmail.com');
+(7, '14', 'wahidsadik7375@gmail.com'),
+(8, '14', 'harun@gmail.com'),
+(9, '14', 'harun@gmail.com'),
+(10, '13', 'harun@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -132,6 +181,7 @@ CREATE TABLE `user` (
   `name` varchar(300) NOT NULL,
   `email` varchar(300) NOT NULL,
   `password` varchar(300) NOT NULL,
+  `role` int(50) NOT NULL,
   `id` int(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -139,20 +189,33 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`name`, `email`, `password`, `id`) VALUES
-('Wahid Sadik', 'admin123@gmail.com', '12345', 1),
-('wahid sadik', 'wahidsadik38@gmail.com', '12345', 2),
-('Nabi', 'instructor1@gmail.com', '12345', 3),
-('Nabi', 'nabi123@gmail.com', '12345', 4);
+INSERT INTO `user` (`name`, `email`, `password`, `role`, `id`) VALUES
+('Wahid Sadik', 'admin123@gmail.com', '12345', 1, 1),
+('wahid sadik', 'wahidsadik38@gmail.com', '12345', 0, 2),
+('Nabi', 'instructor1@gmail.com', '12345', 2, 3),
+('Nabi', 'nabi123@gmail.com', '12345', 0, 4),
+('harun', 'harun@gmail.com', '12345', 0, 5);
 
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `adminandinstructorlogin`
+--
+ALTER TABLE `adminandinstructorlogin`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `complainbox`
 --
 ALTER TABLE `complainbox`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `dietchart`
+--
+ALTER TABLE `dietchart`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -184,16 +247,28 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `adminandinstructorlogin`
+--
+ALTER TABLE `adminandinstructorlogin`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `complainbox`
 --
 ALTER TABLE `complainbox`
   MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `dietchart`
+--
+ALTER TABLE `dietchart`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `hiredinstructor`
 --
 ALTER TABLE `hiredinstructor`
-  MODIFY `id` int(22) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(22) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `instructor`
@@ -211,7 +286,7 @@ ALTER TABLE `showreply`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
