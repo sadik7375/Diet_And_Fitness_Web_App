@@ -32,11 +32,13 @@ else{
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Admin Panel</title>
+  <title>Admin  Panel</title>
 </head>
 
 <body class="font-sans bg-gray-100">
 
+
+  
 <?php if ($email == 'admin123@gmail.com' || $email == 'instuctor1@gmail.com'    ): ?>
   <nav class="bg-[#FEB600] p-4 text-white">
     <div class="container mx-auto">
@@ -56,6 +58,9 @@ else{
   </nav>
   <?php endif; ?>
 
+
+
+  
   <div class="container mx-auto mt-8 ml-20 p-4">
 
   <?php if ($email == 'admin123@gmail.com' || $email == 'instuctor1@gmail.com'    ): ?>
@@ -70,6 +75,9 @@ else{
       </div></a>
 
       <?php endif; ?>
+
+
+      
 
       <?php if ($email == 'admin123@gmail.com'): ?>
       <a href="hiredInstructorInfo.php"><div class="bg-[#FEB600] p-6 rounded-lg shadow-md">
