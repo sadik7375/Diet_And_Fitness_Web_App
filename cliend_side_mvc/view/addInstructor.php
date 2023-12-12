@@ -34,6 +34,9 @@
 
 
       <div class="bg-gray-300  ml-32 p-12 shadow-xl">
+
+
+        //add instructor form
       <form  method="POST" action="../controller/instructorController.php" class="max-w-md mx-auto border-spacing-2">
 
         <div class="mb-4">
