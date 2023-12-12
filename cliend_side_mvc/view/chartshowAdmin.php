@@ -73,6 +73,8 @@ else{
                 
                 <?php
            require_once('../model/chartDataModel.php');
+
+           //get chartData from database and admin edit delete data  by tracking email
            $result = getAllChartData();
            
            // Loop through the fetched data and display it in the table
